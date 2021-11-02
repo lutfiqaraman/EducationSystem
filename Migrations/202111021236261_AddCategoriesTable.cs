@@ -15,10 +15,6 @@
                         Name = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
-
-            Sql("INSERT INTO dbo.Categories VALUES ('Web Development')");
-            Sql("INSERT INTO dbo.Categories VALUES ('PRogramming Language')");
-
         }
         
         public override void Down()

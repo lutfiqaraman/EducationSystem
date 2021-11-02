@@ -71,6 +71,10 @@
     <Compile Include="Migrations\202111021247264_AddCategoryColumnToCoursesTable.designer.cs">
       <DependentUpon>202111021247264_AddCategoryColumnToCoursesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111021256282_RemoveSqlInsertStatementFromCategories.cs" />
+    <Compile Include="Migrations\202111021256282_RemoveSqlInsertStatementFromCategories.designer.cs">
+      <DependentUpon>202111021256282_RemoveSqlInsertStatementFromCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111021247264_AddCategoryColumnToCoursesTable.resx">
       <DependentUpon>202111021247264_AddCategoryColumnToCoursesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111021256282_RemoveSqlInsertStatementFromCategories.resx">
+      <DependentUpon>202111021256282_RemoveSqlInsertStatementFromCategories.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
