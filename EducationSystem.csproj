@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Author.cs" />
+    <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\CourseLevel.cs" />
     <Compile Include="Entities\Tag.cs" />
