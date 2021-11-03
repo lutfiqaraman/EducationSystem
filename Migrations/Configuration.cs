@@ -18,6 +18,10 @@
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method
             //  to avoid creating duplicate seed data.
+
+            context.Authors.AddOrUpdate(
+                a => a.Name,
+                new Entities.Author { Name = "Andrew Southwell" });
         }
     }
 }

@@ -94,6 +94,10 @@
     <Compile Include="Migrations\202111021806448_DeleteCategoriesTable.designer.cs">
       <DependentUpon>202111021806448_DeleteCategoriesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111031811012_DescriptionColumnInCourseTableIsRequired.cs" />
+    <Compile Include="Migrations\202111031811012_DescriptionColumnInCourseTableIsRequired.designer.cs">
+      <DependentUpon>202111031811012_DescriptionColumnInCourseTableIsRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111021806448_DeleteCategoriesTable.resx">
       <DependentUpon>202111021806448_DeleteCategoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111031811012_DescriptionColumnInCourseTableIsRequired.resx">
+      <DependentUpon>202111031811012_DescriptionColumnInCourseTableIsRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

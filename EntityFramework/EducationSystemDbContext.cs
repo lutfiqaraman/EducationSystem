@@ -14,5 +14,12 @@ namespace EducationSystem.EntityFramework
         {
 
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Course>()
+                .Property(c => c.Description)
+                .IsRequired();
+        }
     }
 }
