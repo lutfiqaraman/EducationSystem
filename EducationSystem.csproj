@@ -56,6 +56,7 @@
     <Compile Include="Entities\Author.cs" />
     <Compile Include="Entities\Course.cs" />
     <Compile Include="Entities\CourseLevel.cs" />
+    <Compile Include="Entities\Cover.cs" />
     <Compile Include="Entities\Tag.cs" />
     <Compile Include="EntityFramework\EducationSystemDbContext.cs" />
     <Compile Include="Migrations\202111011550082_Initial Model.cs" />
@@ -98,6 +99,14 @@
     <Compile Include="Migrations\202111031811012_DescriptionColumnInCourseTableIsRequired.designer.cs">
       <DependentUpon>202111031811012_DescriptionColumnInCourseTableIsRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111040843343_CreateRelationshipBetweenAuthorAndCourse.cs" />
+    <Compile Include="Migrations\202111040843343_CreateRelationshipBetweenAuthorAndCourse.designer.cs">
+      <DependentUpon>202111040843343_CreateRelationshipBetweenAuthorAndCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111040941488_CreateRelationshipBetweenAuthorAndCourse1.cs" />
+    <Compile Include="Migrations\202111040941488_CreateRelationshipBetweenAuthorAndCourse1.designer.cs">
+      <DependentUpon>202111040941488_CreateRelationshipBetweenAuthorAndCourse1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111031811012_DescriptionColumnInCourseTableIsRequired.resx">
       <DependentUpon>202111031811012_DescriptionColumnInCourseTableIsRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111040843343_CreateRelationshipBetweenAuthorAndCourse.resx">
+      <DependentUpon>202111040843343_CreateRelationshipBetweenAuthorAndCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111040941488_CreateRelationshipBetweenAuthorAndCourse1.resx">
+      <DependentUpon>202111040941488_CreateRelationshipBetweenAuthorAndCourse1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
