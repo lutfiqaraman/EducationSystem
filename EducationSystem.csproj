@@ -59,6 +59,7 @@
     <Compile Include="Entities\Cover.cs" />
     <Compile Include="Entities\Tag.cs" />
     <Compile Include="EntityFramework\EducationSystemDbContext.cs" />
+    <Compile Include="EntityFramework\EntityConfigurations\CourseConfiguration.cs" />
     <Compile Include="Migrations\202111011550082_Initial Model.cs" />
     <Compile Include="Migrations\202111011550082_Initial Model.designer.cs">
       <DependentUpon>202111011550082_Initial Model.cs</DependentUpon>
