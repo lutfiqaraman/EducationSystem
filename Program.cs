@@ -16,7 +16,7 @@ namespace EducationSystem
             CourseOperations courses = new CourseOperations();
 
             courses.GetSomeCoursesByLinqSyntax();
-            courses.GetSomeCoursesByExtensionMethod();
+            courses.GetSomeCoursesByExtension();
 
             Console.ReadKey();
         }
