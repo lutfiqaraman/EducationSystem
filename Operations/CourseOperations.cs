@@ -36,7 +36,7 @@ namespace EducationSystem.Operations
             Console.WriteLine();
         }
 
-        public void GetSomeCoursesByExtension()
+        public void GetSomeCoursesByLinqExtension()
         {
             IQueryable<Course> courses = context.Courses
                 .Where(c => c.Name.Contains("c#"))
