@@ -97,5 +97,48 @@ namespace EducationSystem.Operations
 
             Console.WriteLine();
         }
+
+        public void GroupBy()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Group By Level");
+
+            var coursesByGroups = context.Courses.GroupBy(c => c.Level);
+
+            foreach (var group in coursesByGroups)
+            {
+                switch (group.Key)
+                {
+                    case CourseLevel.Beginner:
+                        Console.WriteLine("Level: Beginner");
+
+                        foreach (var course in group)
+                            Console.WriteLine("\t" + course.Name);
+
+                        break;
+                    
+                    case CourseLevel.Intermediate:
+                        Console.WriteLine("Level: Intermediate");
+
+                        foreach (var course in group)
+                            Console.WriteLine("\t" + course.Name);
+
+                        break;
+
+                    case CourseLevel.Advanced:
+                        Console.WriteLine("Level: Advanced");
+
+                        foreach (var course in group)
+                            Console.WriteLine("\t" + course.Name);
+
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
+            Console.WriteLine();
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace EducationSystem
             courses.GetSomeCoursesByLinqExtension();
             courses.CourseFilter();
             courses.GetCoursesTags();
+            courses.GroupBy();
 
             Console.ReadKey();
         }
