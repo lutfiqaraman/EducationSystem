@@ -55,6 +55,46 @@ namespace EducationSystem.Operations
 
             Console.WriteLine();
             Console.WriteLine("You have {0} courses", count);
+            Console.WriteLine();
+
+            
+
+        }
+
+        public void CourseFilter()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Filter Method");
+
+            IQueryable beginnerCourse = context.Courses
+                .Where(c => c.Level == CourseLevel.Beginner)
+                .OrderBy(c => c.Name)
+                .ThenBy(c => c.Description)
+                .Select(c => new { CourseName = c.Name, AuthorName = c.Author.Name });
+
+            foreach (var item in beginnerCourse)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public void GetCoursesTags()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Get beginner Courses Tags");
+
+            IQueryable<Tag> tags = context.Courses
+                .Where(c => c.Level == CourseLevel.Beginner)
+                .OrderBy(c => c.Name)
+                .ThenBy(c => c.Description)
+                .SelectMany(c => c.Tags);
+
+            foreach (var t in tags)
+            {
+                Console.WriteLine(t.Name);
+            }
+
+            Console.WriteLine();
         }
     }
 }
