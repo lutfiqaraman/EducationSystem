@@ -87,7 +87,8 @@ namespace EducationSystem.Operations
                 .Where(c => c.Level == CourseLevel.Beginner)
                 .OrderBy(c => c.Name)
                 .ThenBy(c => c.Description)
-                .SelectMany(c => c.Tags);
+                .SelectMany(c => c.Tags)
+                .Distinct();
 
             foreach (var t in tags)
             {
