@@ -21,6 +21,8 @@ namespace EducationSystem
             courses.GetCoursesTags();
             courses.GroupBy();
             courses.Join();
+            courses.GroupJoin();
+            courses.CrossJoin();
 
             Console.ReadKey();
         }

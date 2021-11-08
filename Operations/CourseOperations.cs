@@ -161,5 +161,25 @@ namespace EducationSystem.Operations
             Console.WriteLine();
             Console.WriteLine();
         }
+
+        public void GroupJoin()
+        {
+            var data = 
+                context.Authors.GroupJoin(context.Courses, a => a.Id, c => c.AuthorId, (author, courses) => new
+                {
+                    Author = author,
+                    CoursesCount = courses.Count()
+                });
+
+            foreach (var item in data)
+            {
+                Console.WriteLine(item.Author.Name + " wrote " + item.CoursesCount + " books");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+
+        
     }
 }
