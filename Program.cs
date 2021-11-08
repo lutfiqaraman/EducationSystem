@@ -20,6 +20,7 @@ namespace EducationSystem
             courses.CourseFilter();
             courses.GetCoursesTags();
             courses.GroupBy();
+            courses.Join();
 
             Console.ReadKey();
         }

@@ -140,5 +140,26 @@ namespace EducationSystem.Operations
 
             Console.WriteLine();
         }
+
+        public void Join()
+        {
+            var data = context.Courses
+                .Join(context.Authors, c => c.AuthorId, a => a.Id, (course, author) => new { 
+                    CourseName = course.Name,
+                    AuthorName = author.Name
+                })
+                .Select(x => new { x.CourseName, x.AuthorName })
+                .ToList();
+
+            Console.WriteLine("Join Course with Author");
+
+            foreach (var item in data)
+            {
+                Console.WriteLine(item.CourseName + " was written by " + item.AuthorName);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+        }
     }
 }
