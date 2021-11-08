@@ -180,6 +180,22 @@ namespace EducationSystem.Operations
             Console.WriteLine();
         }
 
-        
+        public void CrossJoin()
+        {
+            var data =
+                context.Authors.SelectMany(a => context.Courses, (author, course) => new
+                {
+                    AuthorName = author.Name,
+                    CourseName = course.Name
+                });
+
+            foreach (var item in data)
+            {
+                Console.WriteLine(item.AuthorName + " wrote " + item.CourseName);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+        }
     }
 }
