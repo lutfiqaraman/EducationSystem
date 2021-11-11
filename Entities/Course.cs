@@ -12,7 +12,7 @@ namespace EducationSystem.Entities
         public float FullPrice { get; set; }
         public Author Author { get; set; }
         public int AuthorId { get; set; }
-        public IList<Tag> Tags { get; set; }
+        public virtual IList<Tag> Tags { get; set; }
         public Cover Cover { get; set; }
     }
 }

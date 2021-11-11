@@ -23,6 +23,7 @@ namespace EducationSystem
             courses.Join();
             courses.GroupJoin();
             courses.CrossJoin();
+            courses.LazyLoading();
 
             Console.ReadKey();
         }

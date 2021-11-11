@@ -197,5 +197,16 @@ namespace EducationSystem.Operations
             Console.WriteLine();
             Console.WriteLine();
         }
+
+        public void LazyLoading()
+        {
+            var course = context.Courses.Single(c => c.Id == 2);
+            string courseName = course.Name;
+
+            Console.WriteLine("Tags of Course " + courseName + " are: ");
+
+            foreach (var tag in course.Tags)
+                Console.WriteLine("- " + tag.Name);
+        }
     }
 }
