@@ -241,5 +241,24 @@ namespace EducationSystem.Operations
             Console.WriteLine();
             Console.WriteLine();
         }
+
+        public void ExplicitLoading()
+        {
+            Console.WriteLine("Explicit Loading");
+
+            Author author = context.Authors.Single(a => a.Id == 1);
+    
+            //Authors that has courses over or equal 50$
+            var filteredAuthor = 
+                author.Courses
+                .Where(c => c.AuthorId == author.Id && c.FullPrice >= 50)
+                .Select(x => new { x.Name, x.FullPrice });
+
+            foreach (var course in filteredAuthor)
+                Console.WriteLine("{0} - {1}", course.Name, course.FullPrice);
+
+            Console.WriteLine();
+            Console.WriteLine();
+        }
     }
 }

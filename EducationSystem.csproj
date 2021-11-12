@@ -108,6 +108,10 @@
     <Compile Include="Migrations\202111040941488_CreateRelationshipBetweenAuthorAndCourse1.designer.cs">
       <DependentUpon>202111040941488_CreateRelationshipBetweenAuthorAndCourse1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111120724009_ChangeColumnTypeOfFullPriceInCourseTable.cs" />
+    <Compile Include="Migrations\202111120724009_ChangeColumnTypeOfFullPriceInCourseTable.designer.cs">
+      <DependentUpon>202111120724009_ChangeColumnTypeOfFullPriceInCourseTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Operations\CourseOperations.cs" />
     <Compile Include="Program.cs" />
@@ -153,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111040941488_CreateRelationshipBetweenAuthorAndCourse1.resx">
       <DependentUpon>202111040941488_CreateRelationshipBetweenAuthorAndCourse1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111120724009_ChangeColumnTypeOfFullPriceInCourseTable.resx">
+      <DependentUpon>202111120724009_ChangeColumnTypeOfFullPriceInCourseTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -18,6 +18,9 @@ namespace EducationSystem.EntityFramework.EntityConfigurations
                 .IsRequired()
                 .HasMaxLength(255);
 
+            Property(c => c.FullPrice)
+                .HasColumnType("float");
+
             // End :: Fields Configuration
     
             // Start :: Relationship Configuration
