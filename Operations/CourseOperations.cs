@@ -207,6 +207,21 @@ namespace EducationSystem.Operations
 
             foreach (var tag in course.Tags)
                 Console.WriteLine("- " + tag.Name);
+
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+
+        public void NPlusOne()
+        {
+            var courses = context.Courses.ToList();
+            foreach (var course in courses)
+            {
+                Console.WriteLine("{0} by {1}", course.Name, course.Author.Name);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
         }
     }
 }
