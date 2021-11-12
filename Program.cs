@@ -25,6 +25,7 @@ namespace EducationSystem
             courses.CrossJoin();
             courses.LazyLoading();
             courses.NPlusOne();
+            courses.EagerLoading();
 
             Console.ReadKey();
         }

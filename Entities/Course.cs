@@ -10,7 +10,7 @@ namespace EducationSystem.Entities
         public string Description { get; set; }
         public CourseLevel Level { get; set; }
         public float FullPrice { get; set; }
-        public Author Author { get; set; }
+        public virtual Author Author { get; set; }
         public int AuthorId { get; set; }
         public virtual IList<Tag> Tags { get; set; }
         public Cover Cover { get; set; }

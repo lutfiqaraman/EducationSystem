@@ -1,6 +1,8 @@
 ﻿using EducationSystem.Entities;
 using EducationSystem.EntityFramework;
 using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace EducationSystem.Operations
@@ -214,11 +216,27 @@ namespace EducationSystem.Operations
 
         public void NPlusOne()
         {
-            var courses = context.Courses.ToList();
+            Console.WriteLine("N Plus One Problem");
+
+            List<Course> courses = context.Courses.ToList();
+
             foreach (var course in courses)
             {
                 Console.WriteLine("{0} by {1}", course.Name, course.Author.Name);
             }
+
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+
+        public void EagerLoading()
+        {
+            Console.WriteLine("Eager Loading");
+
+            List<Course> courses = context.Courses.Include(c => c.Author).ToList();
+
+            foreach (var course in courses)
+                Console.WriteLine("{0} by {1}", course.Name, course.Author.Name);
 
             Console.WriteLine();
             Console.WriteLine();
