@@ -260,5 +260,26 @@ namespace EducationSystem.Operations
             Console.WriteLine();
             Console.WriteLine();
         }
+
+        public void AddCourse()
+        {
+            Console.WriteLine();
+
+            Author author = context.Authors.Single(a => a.Id == 1);
+
+            var course = new Course()
+            {
+                Name = "EF Course",
+                Description = "A new course about EF",
+                FullPrice = 19.69f,
+                Level = CourseLevel.Beginner,
+                AuthorId = author.Id
+            };
+
+            context.Courses.Add(course);
+            context.SaveChanges();
+
+            Console.WriteLine("A new course had been added");
+        }
     }
 }

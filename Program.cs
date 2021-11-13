@@ -27,6 +27,7 @@ namespace EducationSystem
             courses.NPlusOne();
             courses.EagerLoading();
             courses.ExplicitLoading();
+            courses.AddCourse();
 
             Console.ReadKey();
         }
