@@ -1,6 +1,7 @@
 ﻿using EducationSystem.EntityFramework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace EducationSystem.Core.Repositories
@@ -31,12 +32,12 @@ namespace EducationSystem.Core.Repositories
 
         public TEntity Get(int id)
         {
-            throw new NotImplementedException();
+            return Context.Set<TEntity>().Find(id);
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return Context.Set<TEntity>().ToList();
         }
 
         public void Remove(TEntity entity)
