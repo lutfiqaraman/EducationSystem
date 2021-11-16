@@ -17,17 +17,17 @@ namespace EducationSystem.Core.Repositories
 
         public void Add(TEntity entity)
         {
-            throw new NotImplementedException();
+            Context.Set<TEntity>().Add(entity);
         }
 
         public void AddRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            Context.Set<TEntity>().AddRange(entities);
         }
 
         public IEnumerable<TEntity> Find(Expression<Func<TEntity, bool>> predicate)
         {
-            throw new NotImplementedException();
+            return Context.Set<TEntity>().Where(predicate);
         }
 
         public TEntity Get(int id)
@@ -42,12 +42,12 @@ namespace EducationSystem.Core.Repositories
 
         public void Remove(TEntity entity)
         {
-            throw new NotImplementedException();
+            Context.Set<TEntity>().Remove(entity);
         }
 
         public void RemoveRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            Context.Set<TEntity>().RemoveRange(entities);
         }
     }
 }
