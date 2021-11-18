@@ -32,6 +32,8 @@ namespace EducationSystem
                 Console.WriteLine();
                 Console.WriteLine("Result of UnitOfWork");
                 Console.WriteLine(course.Name);
+
+                unitOfWork.Complete();
             }
 
             Console.ReadKey();
