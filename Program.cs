@@ -1,4 +1,6 @@
-﻿using EducationSystem.Operations;
+﻿using EducationSystem.Core.UnitOfWork;
+using EducationSystem.EntityFramework;
+using EducationSystem.Operations;
 using System;
 
 namespace EducationSystem
@@ -22,6 +24,15 @@ namespace EducationSystem
             courses.EagerLoading();
             courses.ExplicitLoading();
             courses.AddCourse();
+
+            using (var unitOfWork = new UnitOfWork(new EducationSystemDbContext()))
+            {
+                var course = unitOfWork.Courses.Get(1);
+
+                Console.WriteLine();
+                Console.WriteLine("Result of UnitOfWork");
+                Console.WriteLine(course.Name);
+            }
 
             Console.ReadKey();
         }
